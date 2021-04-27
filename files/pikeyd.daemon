@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pikeyd_start(){
+	pikeyd165 -smi -ndb -d
+}
+
+pikeyd_stop
+	pikeyd165 -k
+
+}

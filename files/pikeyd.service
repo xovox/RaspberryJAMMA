@@ -1,0 +1,12 @@
+[Unit]
+Description=pikeyd JAMMA controls
+After=network.target
+StartLimitIntervalSec=0[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+User=root
+ExecStart=/opt/RaspberryJAMMA/bin/pikeyd_daemon
+
+[Install]
+WantedBy=multi-user.target
