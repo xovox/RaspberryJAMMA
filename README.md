@@ -1,6 +1,6 @@
-# RetroJAMMA
+# RaspberryJAMMA
 
-RetroJAMMA is a project focused on adding JAMMA controls to Raspbian, specifically RetroPie.
+RaspberryJAMMA is a project focused on adding JAMMA controls to Raspbian
 This will be achieved by incorporating the hard work performed by Jochen at ArcadeForge and his Pi2JAMMA hardware as well as his toolset incorporating JAMMA controls into Raspbian
 
 # What about JAMMA video?!
