@@ -1,0 +1,23 @@
+--- ../../pikeyd/uinput.h	2021-04-28 11:14:37.814338392 -0400
++++ uinput.h	2021-04-14 06:56:38.346567202 -0400
+@@ -23,14 +23,17 @@
+    02111-1307 USA.  
+ */
+ 
++#include <stdbool.h>
++
+ #ifndef _UINPUT_H_
+ #define _UINPUT_H_
+ 
+-int init_uinput(void);
++int init_uinput(bool skip_mouse_init);
+ int test_uinput(void);
+-int close_uinput(void);
++int close_uinput(bool skip_mouse_init);
+ int send_gpio_keys(int gpio, int value);
++
+ int sendKey(int key, int value);
+-void get_last_key(keyinfo_s *kp);
++int sendRel(int devm,int dx, int dy);
+ 
+ #endif

@@ -1,0 +1,45 @@
+--- ../../pikeyd/README	2021-04-28 11:14:37.806338285 -0400
++++ README	2021-04-14 06:56:38.346567202 -0400
+@@ -1,3 +1,17 @@
++---------------------------------------
++This is a hacked version of pikeyd,
++which polls a 24bit joystick interface
++consisting of 3 74hc165 (option: serial Trackball/mouse/4 channel adc hardware converter)
++
++New: Extension mechanism to access 
++special keys (see pikeyd165.conf).
++
++Trackball Emulation added. use -smi to disable
++---------------------------------------
++
++
++
++
+ pikeyd 1.0 (Jan 2013)
+ The Universal Raspberry Pi GPIO keyboard daemon.
+ Copyright (C) 2013 Michael Moller.
+@@ -8,20 +22,15 @@
+ It polls and debounces the configured GPIO inputs,
+ and emits uinput events to simulate the keyboard.
+ Each GPIO contact can emit a sequence of keyboard characters.
+-Configuration is stored in either ~/.pikeyd.conf or /etc/pikeyd.conf
++Configuration is stored in either ~/.pikeyd165.conf or /etc/pikeyd165.conf
+ 
+ Usage: pikeyd [option]
++
+ Options:
+   -d    run as daemon
+   -k    try to terminate running daemon
+   -v    version
++  -smi  skip mouse initialisation, no mouse/trackball devices are created
++  -ndb  no key debounce
+   -h    this help
+ 
+-Install notes.
+-If you're using Raspbian wheezy add the folowing to /etc/modules:
+-uinput
+-i2c-dev
+-
+-edit /etc/modprobe.d/raspi-blacklist.conf
+-and remove or comment out
+-#blacklist i2c-bcm2708
